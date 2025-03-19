@@ -1,26 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+	font-family: "Satoshi-Variable";
+	src: url("./fonts/Satoshi-Variable.ttf") format("truetype");
+	font-weight: 300 900;
+	font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+	--color-background: #000000;
+	--color-foreground: #ffffff;
+
+	--font-sans: "Satoshi-Variable", sans-serif;
+	--font-serif: "Instrument Serif", serif;
+
+	--text-base: 1.5rem;
+	--text-xl: 2rem;
+	--text-2xl: 4rem;
+	--text-4xl: 8rem;
+	--text-8xl: 11.25rem;
+
+	--tracking-body: -0.01em;
+	--tracking-headings: var(--tracking-tighter);
+
+	--leading-body: 1.5em;
+	--leading-headings: 0.85em;
+
+	--breakpoint-sm: 360px;
+	--breakpoint-md: 1024px;
+	--breakpoint-lg: 1440px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer base {
+	body {
+		@apply bg-background text-foreground;
+	}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	a,
+	p,
+	span,
+	h4 {
+		@apply font-serif tracking-body leading-body;
+	}
+
+	h3,
+	h2,
+	h1 {
+		@apply font-sans tracking-headings leading-headings font-black;
+	}
+
+	a,
+	p {
+		@apply text-base;
+	}
+
+	span,
+	h4 {
+		@apply text-xl;
+	}
+
+	h3 {
+		@apply text-2xl;
+	}
+
+	h2 {
+		@apply text-4xl;
+	}
+
+	h1 {
+		@apply text-8xl;
+	}
 }
