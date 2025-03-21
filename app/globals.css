@@ -3,14 +3,14 @@
 
 @font-face {
 	font-family: "Satoshi-Variable";
-	src: url("./fonts/Satoshi-Variable.ttf") format("truetype");
+	src: url("./assets/fonts/Satoshi-Variable.ttf") format("truetype");
 	font-weight: 300 900;
 	font-display: swap;
 }
 
 @theme {
-	--color-background: #000000;
-	--color-foreground: #ffffff;
+	--color-background: #0d0d0d;
+	--color-foreground: #f7f5f0;
 
 	--font-sans: "Satoshi-Variable", sans-serif;
 	--font-serif: "Instrument Serif", serif;
@@ -27,14 +27,45 @@
 	--leading-body: 1.5em;
 	--leading-headings: 0.85em;
 
-	--breakpoint-sm: 360px;
-	--breakpoint-md: 1024px;
-	--breakpoint-lg: 1440px;
+	--breakpoint-sm: 361px;
+	--breakpoint-md: 1025px;
+	--breakpoint-lg: 1441px;
+
+	--padding-sm: 1.5rem;
+	--padding-md: 4rem;
+	--padding-lg: 5rem;
+
+	--nav-height: 8.5rem;
+
+	--animate-cycle: cycle 10s linear infinite;
+	--animate-shimmer: shimmer 2s linear infinite;
+
+	@keyframes cycle {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	@keyframes shimmer {
+		from {
+			background-position: 0 0;
+		}
+		to {
+			background-position: -200% 0;
+		}
+	}
 }
 
 @layer base {
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	* {
+		box-shadow: 0px 0px 0px 1px red inset;
 	}
 
 	a,
@@ -71,4 +102,40 @@
 	h1 {
 		@apply text-8xl;
 	}
+
+	/* ::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+	}
+
+	*::-moz-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.5);
+		border-radius: 10px;
+	}
+
+	*::-moz-scrollbar-thumb:hover {
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	*::-moz-scrollbar-track {
+		background: transparent;
+	} */
 }
