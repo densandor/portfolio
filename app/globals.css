@@ -37,6 +37,9 @@
 
 	--nav-height: 8.5rem;
 
+	--custom-duration: 0.3s;
+	--animation-style: ease-in-out;
+
 	--animate-cycle: cycle 10s linear infinite;
 	--animate-shimmer: shimmer 2s linear infinite;
 

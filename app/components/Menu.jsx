@@ -13,17 +13,17 @@ export default function Menu(props) {
 			}`}
 		>
 			<div
-				className={`size-full flex justify-center items-center bg-background transition-all duration-500 ${
+				className={`size-full flex justify-center items-center bg-background transition-opacity duration-(--custom-duration) ${
 					props.open ? "opacity-100" : "opacity-0"
 				}`}
 			>
-				<ul className="responsive-padding flex flex-col items-center justify-center w-full max-w-[1280px] hover:text-opacity-50">
+				<ul className="group/list responsive-padding flex flex-col items-center justify-center w-full max-w-[1280px]">
 					{menuItems.map((item, index) => (
-						<li key={index} className="w-full">
-							<a href={item.href} onClick={props.closeMenu}>
-								<div className="w-full flex justify-between">
+						<li key={index} className="group w-full">
+							<a href={item.href} onClick={props.closeMenu} className="">
+								<div className="w-full flex justify-between transition-all duration-(--custom-duration) group-hover/list:[&:not(:hover)]:opacity-50 ease-in-out">
 									<p className="font-sans text-[1rem]">{index}</p>
-									<h3 className="text-xl md:text-2xl lg:text-4xl">
+									<h3 className="transition-transform duration-(--custom-duration) group-hover:-translate-x-4 text-xl md:text-2xl lg:text-4xl">
 										{item.name}
 									</h3>
 								</div>

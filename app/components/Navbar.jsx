@@ -32,13 +32,9 @@ export default function Navbar() {
 					className="w-[3rem] h-[3rem] group relative font-sans text-xl font-bold overflow-hidden transition-transform transform hover:scale-110"
 				>
 					sd
-					{/* <div className="flex justify-around transition-transform duration-300 ease-out transform group-hover:translate-y-[-100%]">
-						sd
-					</div> */}
 				</a>
 				<div className="flex justify-center items-center transition-transform transform hover:scale-110">
 					<Hamburger
-						className="transition-transform duration-300 ease-out hover: translate-y-[-100%]"
 						color="var(--color-foreground)"
 						toggled={open}
 						distance="sm"
