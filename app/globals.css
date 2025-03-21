@@ -59,14 +59,18 @@
 	}
 }
 
+@utility responsive-padding {
+	@apply px-(--padding-sm) md:px-(--padding-md) lg:px-(--padding-lg);
+}
+
 @layer base {
 	body {
 		@apply bg-background text-foreground;
 	}
 
-	* {
+	/* * {
 		box-shadow: 0px 0px 0px 1px red inset;
-	}
+	} */
 
 	a,
 	p,
@@ -103,7 +107,7 @@
 		@apply text-8xl;
 	}
 
-	/* ::-webkit-scrollbar {
+	::-webkit-scrollbar {
 		width: 8px;
 		height: 8px;
 	}
@@ -137,5 +141,5 @@
 
 	*::-moz-scrollbar-track {
 		background: transparent;
-	} */
+	}
 }

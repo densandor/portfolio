@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Turn as Hamburger } from "hamburger-react";
+import Menu from "./Menu";
 
 export default function Navbar() {
 	const [open, setOpen] = useState(false);
@@ -24,11 +25,7 @@ export default function Navbar() {
 	}, [open]);
 
 	return (
-		<nav
-			className={`w-full ${
-				open ? "h-screen" : "h-[calc(1px + (--nav-height))]"
-			} flex flex-col`}
-		>
+		<nav className="w-full h-[calc(1px + (--nav-height))] flex flex-col">
 			<div className="h-(--nav-height) flex justify-between items-center ">
 				<a
 					href="/"
@@ -39,7 +36,7 @@ export default function Navbar() {
 						sd
 					</div> */}
 				</a>
-				<div className="flex justify-center items-center overflow-hidden transition-transform transform hover:scale-110">
+				<div className="flex justify-center items-center transition-transform transform hover:scale-110">
 					<Hamburger
 						className="transition-transform duration-300 ease-out hover: translate-y-[-100%]"
 						color="var(--color-foreground)"
@@ -51,7 +48,7 @@ export default function Navbar() {
 				</div>
 			</div>
 			<hr className="opacity-20 h-[1px]" />
-			{open && <div className="grow">Links</div>}
+			<Menu closeMenu={closeMenu} open={open} />
 		</nav>
 	);
 }

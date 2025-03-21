@@ -24,13 +24,13 @@ export default function Hero() {
 	}, []);
 
 	return (
-		<div className="h-[calc(100vh-var(--nav-height)-1px)] flex flex-col justify-center items-left md:items-center">
+		<div className="h-[calc(100vh-var(--nav-height)-1px)] flex flex-col items-left md:items-center justify-center ">
 			<p className="font-sans text-base text-left md:text-xl md:text-center">
 				Hi, I'm
 			</p>
 			<div className="flex w-[calc(100% + 2*(var(--padding-sm)))] ml-[calc(-(var(--padding-sm)))] text-nowrap py-[1rem]">
 				{size.width < 1025 ? (
-					<ul className="flex animate-cycle">
+					<ul className="flex animate-cycle -z-10">
 						{Array.from({ length: 10 }, (_, i) => i).map((el) => (
 							<li key={el} className="flex">
 								<h1 className="text-2xl">Sandor Den -&nbsp;</h1>
@@ -45,9 +45,9 @@ export default function Hero() {
 				Currently, I study Computer Science at the University of Warwick. I love
 				learning new things and solving problems using tech.
 			</p>
-			<button className=" mt-20 w-[15rem] h-[5rem] flex items-center justify-center px-6 rounded-[100] border border-dark-700 bg-[linear-gradient(110deg,#1A1A1A,45%,#262626,55%,#1A1A1A)] hover:bg-[linear-gradient(110deg,#262626,45%,#404040,55%,#262626)] bg-[length:200%_100%] animate-shimmer">
+			<button className="mt-[2.5rem] w-[15rem] h-[5rem] flex items-center justify-center rounded-[100] border border-dark-700 bg-[linear-gradient(110deg,#1A1A1A,45%,#262626,55%,#1A1A1A)] hover:bg-[linear-gradient(110deg,#262626,45%,#404040,55%,#262626)] bg-[length:200%_100%] animate-shimmer">
 				<a
-					className="w-full h-full flex items-center justify-center"
+					className="size-full flex items-center justify-center"
 					href="#projects"
 				>
 					Check out my work
