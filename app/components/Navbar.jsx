@@ -25,8 +25,8 @@ export default function Navbar() {
 	}, [open]);
 
 	return (
-		<nav className="w-full h-[calc(1px + (--nav-height))] flex flex-col">
-			<div className="h-(--nav-height) flex justify-between items-center ">
+		<nav className="w-full h-[calc(1px + (--nav-height))] flex flex-col responsive-max-width">
+			<div className="h-(--nav-height) flex justify-between items-center">
 				<a
 					href="/"
 					className="w-[3rem] h-[3rem] group relative font-sans text-xl font-bold overflow-hidden transition-transform transform hover:scale-110"

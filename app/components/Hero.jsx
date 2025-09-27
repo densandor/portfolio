@@ -24,21 +24,21 @@ export default function Hero() {
 	}, []);
 
 	return (
-		<div className="h-[calc(100vh-var(--nav-height)-1px)] flex flex-col items-left md:items-center justify-center ">
+		<div className="h-[calc(100vh-var(--nav-height)-1px)] flex flex-col items-left md:items-center justify-center">
 			<p className="font-sans text-base text-left md:text-xl md:text-center">
 				Hi, I'm
 			</p>
 			<div className="flex w-[calc(100% + 2*(var(--padding-sm)))] ml-[calc(-(var(--padding-sm)))] text-nowrap py-[1rem]">
-				{size.width < 1025 ? (
+				{size.width < 361 ? (
 					<ul className="flex animate-cycle -z-10">
-						{Array.from({ length: 10 }, (_, i) => i).map((el) => (
+						{Array.from({ length: 12 }, (_, i) => i).map((el) => (
 							<li key={el} className="flex">
 								<h1 className="text-2xl">Sandor Den -&nbsp;</h1>
 							</li>
 						))}
 					</ul>
 				) : (
-					<h1 className="max-md:text-2xl">Sandor Den</h1>
+					<h1 className="text-2xl md:text-4xl lg:text-8xl">Sandor Den</h1>
 				)}
 			</div>
 			<p className="font-sans text-base text-left md:text-xl md:text-center max-w-[940px]">

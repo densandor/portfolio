@@ -27,13 +27,15 @@
 	--leading-body: 1.5em;
 	--leading-headings: 0.85em;
 
-	--breakpoint-sm: 361px;
-	--breakpoint-md: 1025px;
-	--breakpoint-lg: 1441px;
+	--breakpoint-sm: 360px;
+	--breakpoint-md: 1024px;
+	--breakpoint-lg: 1440px;
 
 	--padding-sm: 1.5rem;
 	--padding-md: 4rem;
 	--padding-lg: 5rem;
+
+	--max-width-lg: calc(var(--breakpoint-lg) - 2 * var(--padding-lg));
 
 	--nav-height: 8.5rem;
 
@@ -64,6 +66,10 @@
 
 @utility responsive-padding {
 	@apply px-(--padding-sm) md:px-(--padding-md) lg:px-(--padding-lg);
+}
+
+@utility responsive-max-width {
+	@apply lg:max-w-(--max-width-lg) lg:mx-auto;
 }
 
 @layer base {
